@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
+import { Counter } from '../components/Counter';
 
 import { styles } from './styles';
 
@@ -24,6 +25,17 @@ export function Home() {
             />
           </TouchableOpacity>
         </View>
+        <View style={styles.viewCountTask}>
+          <View style={styles.viewCreated}>
+            <Text style={styles.created}>Criadas</Text>
+            <Counter />
+          </View>
+          <View style={styles.viewDone}>
+            <Text style={styles.done}>Concluídas</Text>
+            <Counter />
+          </View>
+        </View>
+        <View style={styles.line}></View>
       </View>
     </View>
   );
